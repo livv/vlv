@@ -369,6 +369,9 @@ button {
   border-radius: var(--radius-xl);
   overflow: hidden;
   transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .app-card:hover {
@@ -377,35 +380,110 @@ button {
   border-color: var(--primary-color);
 }
 
-.app-card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.app-card-icon-wrapper {
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.app-card-icon-large {
+  width: 7rem;
+  height: 7rem;
+  border-radius: var(--radius-xl);
+  object-fit: contain;
+  transition: all var(--transition-fast);
+  /* Ensure consistent appearance regardless of original image size */
+  max-width: 100%;
+  max-height: 100%;
+  /* Force same visual size by using fixed dimensions */
+  width: 7rem !important;
+  height: 7rem !important;
+  /* Remove any background or shadow */
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.app-card:hover .app-card-icon-large {
+  transform: translateY(-4px);
+}
+
+.app-card-icon-large {
+  width: 7rem;
+  height: 7rem;
+  border-radius: var(--radius-xl);
+  object-fit: contain;
+  transition: all var(--transition-fast);
+  /* Ensure consistent appearance regardless of original image size */
+  max-width: 100%;
+  max-height: 100%;
+  /* Force same visual size by using fixed dimensions */
+  width: 7rem !important;
+  height: 7rem !important;
+}
+
+.app-card:hover .app-card-icon-large {
+  transform: translateY(-4px);
+}
+
+.app-card-icon-large {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
   background: var(--background-alt);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  /* Ensure consistent appearance regardless of original image size */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.app-card:hover .app-card-icon-large {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .app-card-content {
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-card-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 1rem;
-}
-
-.app-card-icon {
-  width: 3rem;
-  height: 3rem;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  background: var(--background-alt);
+  flex-shrink: 0;
 }
 
 .app-card-title {
   font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.3;
+}
+
+.app-card-category {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.app-card-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.app-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .app-card-category {
