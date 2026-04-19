@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Apps | Personal Application Portfolio</title>
+  <meta name="description" content="A showcase of elegant and powerful macOS applications designed to enhance your productivity and workflow.">
+  <meta name="keywords" content="macOS apps, productivity tools, developer tools, clipboard manager">
+  <meta name="author" content="vlv">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Apps | Personal Application Portfolio">
+  <meta property="og:description" content="Discover elegant and powerful macOS applications designed to enhance your productivity.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Apps | Personal Application Portfolio">
+  <meta name="twitter:description" content="Discover elegant and powerful macOS applications designed to enhance your productivity.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="/" class="logo">
+        <span>vlv</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="#apps" class="nav-link" data-i18n="nav_apps">Apps</a></li>
+        </ul>
+        
+        <div class="header-actions">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="lang-toggle" aria-label="Toggle language">EN</button>
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title" data-i18n="hero_title">My Apps Collection</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">A showcase of elegant and powerful macOS applications designed to enhance your productivity and workflow.</p>
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn-primary" data-i18n="hero_cta_apps">View Apps</a>
+        <a href="mailto:contact@example.com" class="btn btn-secondary" data-i18n="hero_cta_contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Section -->
+  <section class="apps-section" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="apps_title">Featured Apps</h2>
+        <p class="section-subtitle" data-i18n="apps_subtitle">Discover tools that make a difference</p>
+      </div>
+      
+      <div class="apps-grid">
+        <!-- vClean App Card -->
+        <article class="app-card">
+          <img src="/assets/images/vclean/vclean_sample.png" alt="vClean Screenshot" class="app-card-image" loading="lazy">
+          <div class="app-card-content">
+            <div class="app-card-header">
+              <img src="/assets/images/vclean/icon.png" alt="vClean Icon" class="app-card-icon">
+              <div>
+                <h3 class="app-card-title" data-i18n="vclean_name">vClean</h3>
+                <span class="app-card-category" data-i18n="vclean_category">Developer Tools</span>
+              </div>
+            </div>
+            <p class="app-card-description" data-i18n="vclean_description">A powerful Xcode build folder cleaner for macOS. Quickly reclaim disk space by removing unnecessary build artifacts, derived data, and cache files.</p>
+            <div class="app-card-footer">
+              <a href="/vclean/" class="app-card-link">
+                <span data-i18n="app_learn_more">Learn More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- vPaste App Card -->
+        <article class="app-card">
+          <img src="/assets/images/vpaste/vpaste_sample.png" alt="vPaste Screenshot" class="app-card-image" loading="lazy">
+          <div class="app-card-content">
+            <div class="app-card-header">
+              <img src="/assets/images/vpaste/icon.png" alt="vPaste Icon" class="app-card-icon">
+              <div>
+                <h3 class="app-card-title" data-i18n="vpaste_name">vPaste</h3>
+                <span class="app-card-category" data-i18n="vpaste_category">Productivity</span>
+              </div>
+            </div>
+            <p class="app-card-description" data-i18n="vpaste_description">A modern clipboard manager for macOS. Save, search, and organize your clipboard history. Supports text, images, files, and code snippets.</p>
+            <div class="app-card-footer">
+              <a href="/vpaste/" class="app-card-link">
+                <span data-i18n="app_learn_more">Learn More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2024 vlv. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
