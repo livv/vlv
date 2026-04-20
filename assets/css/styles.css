@@ -842,6 +842,22 @@ button {
   justify-content: center;
 }
 
+.app-store-badge {
+  height: auto;
+  max-height: 82px;
+  width: auto;
+  transition: transform var(--transition-fast);
+}
+
+.app-store-badge:hover {
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .app-store-badge {
+  /* 在深色模式下可能需要调整图片颜色 */
+  filter: brightness(1.1);
+}
+
 @media (max-width: 640px) {
   .download-buttons {
     gap: 0.5rem;
@@ -849,6 +865,10 @@ button {
 
   .app-actions .download-buttons {
     margin-top: 1.5rem;
+  }
+
+  .app-store-badge {
+    max-height: 60px;
   }
 }
 
