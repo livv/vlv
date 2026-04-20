@@ -4,6 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileMenu();
   initAnimations();
+
+  // Initialize App Store badges after DOM is ready
+  setTimeout(() => {
+    const html = document.documentElement;
+    const badges = document.querySelectorAll('.app-store-badge[data-theme-light][data-theme-dark]');
+
+    function updateBadgeSrc() {
+      const theme = html.getAttribute('data-theme');
+      badges.forEach(badge => {
+        const lightSrc = badge.getAttribute('data-theme-light');
+        const darkSrc = badge.getAttribute('data-theme-dark');
+        const src = theme === 'dark' ? darkSrc : lightSrc;
+        badge.src = src;
+      });
+    }
+
+    // Initial update
+    updateBadgeSrc();
+
+    // Update when theme changes
+    const observer = new MutationObserver(updateBadgeSrc);
+    observer.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+  }, 100);
 });
 
 // ===== Theme Management =====
@@ -178,3 +201,4 @@ function updateMetaTags(title, description, keywords = '') {
     meta.setAttribute('content', content);
   });
 }
+
